@@ -45,6 +45,6 @@ jobs:
         with:
           name: endomondo-exporter-linux-64
           path: |
-            endomondo-exporter.exe
+            endomondo-exporter
             README.md
             settings.json
