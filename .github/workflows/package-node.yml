@@ -13,8 +13,7 @@ jobs:
         uses: actions/checkout@v2
       - uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
-      - run: npm i -g nexe
-      - run: nexe -t windows-x64-12.16.3 index.js
+      - run: npx nexe -t windows-x64-12.16.3 index.js
       - name: Archive .exe
         uses: actions/upload-artifact@v2
         with:
