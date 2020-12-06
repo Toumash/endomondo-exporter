@@ -3,7 +3,7 @@ name: Package Node for Windows
 on: push
 
 jobs:
-  package-windows-x64:
+  package-windows-64:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -13,7 +13,37 @@ jobs:
       - name: Archive .exe
         uses: actions/upload-artifact@v2
         with:
-          name: test-prod
+          name: endomondo-exporter-release
+          path: |
+            endomondo-exporter.exe
+            README.md
+            settings.json
+  package-windows-x86:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: bahmutov/npm-install@v1
+      - run: npx nexe -t windows-x86-12.16.3 index.js
+      - name: Archive .exe
+        uses: actions/upload-artifact@v2
+        with:
+          name: endomondo-exporter-release
+          path: |
+            endomondo-exporter.exe
+            README.md
+            settings.json
+  package-linux-64:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: bahmutov/npm-install@v1
+      - run: npx nexe -t linux-x64-12.16.2 index.js
+      - name: Archive .exe
+        uses: actions/upload-artifact@v2
+        with:
+          name: endomondo-exporter-release
           path: |
             endomondo-exporter.exe
             README.md
