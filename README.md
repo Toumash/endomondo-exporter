@@ -1,4 +1,4 @@
-# Endomondo data exporter
+# Endomondo data exporter ![](https://github.com/Toumash/endomondo-exporter/workflows/PackageNodeExecutables/badge.svg?branch=master)
 
 How to export data from endomondo?
 
