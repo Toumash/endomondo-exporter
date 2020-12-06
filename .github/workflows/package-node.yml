@@ -13,7 +13,7 @@ jobs:
       - name: Archive .exe
         uses: actions/upload-artifact@v2
         with:
-          name: endomondo-exporter-release
+          name: endomondo-exporter-win-64
           path: |
             endomondo-exporter.exe
             README.md
@@ -28,7 +28,7 @@ jobs:
       - name: Archive .exe
         uses: actions/upload-artifact@v2
         with:
-          name: endomondo-exporter-release
+          name: endomondo-exporter-win-x86
           path: |
             endomondo-exporter.exe
             README.md
@@ -43,7 +43,7 @@ jobs:
       - name: Archive .exe
         uses: actions/upload-artifact@v2
         with:
-          name: endomondo-exporter-release
+          name: endomondo-exporter-linux-64
           path: |
             endomondo-exporter.exe
             README.md
