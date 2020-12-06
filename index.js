@@ -1,7 +1,9 @@
 require('cross-fetch/polyfill');
 const { Api, MobileApi } = require('endomondo-api-handler');
 const fs = require('fs');
-const cfg = require('./settings.json')
+
+let cfgFile = fs.readFileSync('./settings.json');
+let cfg = JSON.parse(cfgFile);
 
 const api = new Api();
 const mobileApi = new MobileApi();
