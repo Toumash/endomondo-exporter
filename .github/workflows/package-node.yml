@@ -1,4 +1,4 @@
-name: Package Node for Windows
+name: PackageNodeExecutables
 
 on: push
 
